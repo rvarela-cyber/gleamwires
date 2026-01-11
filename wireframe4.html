@@ -1,1 +1,198 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gleam - Contact Page Wireframe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 font-sans">
+
+  <!-- Wireframe Header -->
+  <div class="bg-gray-800 text-white text-center py-2 text-xs tracking-widest uppercase">
+    Wireframe · Gleam Contact Page
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b-2 border-gray-300 px-8 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gray-300 rounded flex items-center justify-center text-xs text-gray-600">LOGO</div>
+        <span class="font-bold text-gray-700 text-xl">GLEAM</span>
+      </div>
+      <div class="flex gap-6">
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Services</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">About</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Case Studies</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Contact</div>
+      </div>
+      <div class="px-4 py-2 bg-gray-700 text-white text-sm rounded">
+        Get Quote
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="bg-white border-b-4 border-gray-200 py-12">
+    <div class="max-w-5xl mx-auto px-8 text-center">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Get in Touch</h1>
+      <p class="text-xl text-gray-600">Have a question? Need a quote? Ready to schedule? We're here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form + Direct Contact -->
+  <section class="bg-gray-50 border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        
+        <!-- Contact Form -->
+        <div class="col-span-2">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+          <form class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <input type="text" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <input type="text" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <input type="tel" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Company Name <span class="text-gray-400">(optional)</span></label>
+              <input type="text" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">How Can We Help?</label>
+              <select class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-600">
+                <option>Select an option...</option>
+                <option>Request a Quote</option>
+                <option>Schedule Service</option>
+                <option>General Question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea rows="14" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 bg-white"></textarea>
+            </div>
+            <button type="submit" class="bg-gray-800 text-white px-8 py-3 rounded-lg font-medium">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Contact Sidebar -->
+        <div class="col-span-1">
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Prefer to Talk?</h3>
+            <p class="text-gray-600 mb-6">You'll reach a real person. Not a call center. Not a recording. Give us a call or send an email and we'll get back to you the same day.</p>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm font-medium text-gray-500 mb-1">Phone</p>
+                <p class="text-lg font-bold text-gray-800">[Phone Number]</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500 mb-1">Email</p>
+                <p class="text-lg font-bold text-gray-800">[Email Address]</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-500 mb-1">Hours</p>
+                <p class="text-gray-700">Monday – Friday: 7:00 AM – 6:00 PM CST</p>
+                <p class="text-gray-700">Saturday: 8:00 AM – 12:00 PM CST</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Headquarters -->
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Where We're Based</h3>
+            <div class="mb-4">
+              <p class="text-gray-700 font-medium">Gleam</p>
+              <p class="text-gray-600">[Street Address]</p>
+              <p class="text-gray-600">Dallas, TX [Zip Code]</p>
+            </div>
+            <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-40 flex items-center justify-center">
+              <div class="text-center text-gray-500">
+                <div class="text-3xl mb-2">🗺️</div>
+                <p class="text-sm">Google Map</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Response Commitment -->
+  <section class="bg-white border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8 text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">What to Expect</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">We respond to every inquiry within 24 hours. Most of the time, it's a lot faster than that. If you need something urgent, call us directly and we'll get it handled.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-gray-700 rounded"></div>
+            <span class="font-bold">GLEAM</span>
+          </div>
+          <p class="text-gray-500 text-sm">Your Friendly Neighborhood Power Washing Service</p>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Services</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>Entry Flat Work</p>
+            <p>Parking Garages</p>
+            <p>Compactors</p>
+            <p>Building Envelope</p>
+            <p>Window Cleaning</p>
+            <p>Parking Lot Striping</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Company</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>About Us</p>
+            <p>Contact</p>
+            <p>Case Studies</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Contact</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>1-800-GLEAM</p>
+            <p>hello@gleam.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-600 text-sm flex justify-center items-center gap-4">
+        <span>© 2025 Gleam. All rights reserved.</span>
+        <span>·</span>
+        <span>Privacy Policy</span>
+        <span>·</span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
