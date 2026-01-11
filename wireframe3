@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gleam - Case Studies Page Wireframe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 font-sans">
+
+  <!-- Wireframe Header -->
+  <div class="bg-gray-800 text-white text-center py-2 text-xs tracking-widest uppercase">
+    Wireframe · Gleam Case Studies Page
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b-2 border-gray-300 px-8 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gray-300 rounded flex items-center justify-center text-xs text-gray-600">LOGO</div>
+        <span class="font-bold text-gray-700 text-xl">GLEAM</span>
+      </div>
+      <div class="flex gap-6">
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Services</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">About</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Case Studies</div>
+        <div class="px-3 py-1 text-gray-500 text-sm border border-dashed border-gray-300 rounded">Contact</div>
+      </div>
+      <div class="px-4 py-2 bg-gray-700 text-white text-sm rounded">
+        Get Quote
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="bg-white border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8 text-center">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">The Work Speaks for Itself</h1>
+      <p class="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">Real projects. Real results. See how we've helped local businesses and national retailers keep their exteriors clean, compliant, and looking the way they should.</p>
+      <p class="text-gray-500 italic mb-4">Want results like these? First power wash is on us.</p>
+      <button class="bg-gray-800 text-white px-8 py-3 rounded-lg font-medium">
+        Claim Your Free Power Wash
+      </button>
+    </div>
+  </section>
+
+  <!-- Case Study 1: Entry Flat Work -->
+  <section class="bg-gray-50 border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Entry Flat Work</span>
+            <span class="text-gray-500 text-sm">Regional Grocery Chain — 43 Locations</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Consistent Exteriors Across 43 Grocery Stores</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A regional grocery chain with 43 locations across the Southwest. High foot traffic. Customer-facing walkways that take a beating from carts, spills, gum, and daily wear.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">Customer-facing walkways were inconsistent across locations. Some stores looked maintained. Others had visible gum, grease stains, and grime ground into corners. There was no standardized cleaning schedule.</p>
+          <p class="text-gray-600 mb-6">Previous vendors were hit or miss. Some showed up late. Some didn't show up at all. When they did show up, the work was rushed. Corners were skipped. Gum was sprayed over, not removed.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We created a twice-annual preventative maintenance contract covering all 43 locations. Standardized scope of work across every store: full flat work cleaning, gum removal, corner and edge detailing, obstacle movement.</p>
+          <p class="text-gray-600 mb-6">Every job included before and after photos, location sign-off, and a documentation package delivered to the corporate facilities team.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>All 43 locations on a consistent maintenance schedule</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Complete documentation delivered to corporate after every visit</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Same-day service for incidents between scheduled cleanings</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Store manager complaints about entrance conditions dropped to near zero</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Contract renewed for third consecutive year</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"We finally have consistency. Every store looks the same, and I don't have to chase vendors anymore."</p>
+            <p class="text-gray-800 font-semibold">— Director of Facilities</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Entry Flat Work</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Ready for consistent results across your locations?</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 2: Parking Garages -->
+  <section class="bg-white border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Parking Garages</span>
+            <span class="text-gray-500 text-sm">Fortune 10 Retailer — 30 Parking Structures Nationwide</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">30 Parking Garages. One Standard. Every Year.</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A major national retailer with locations in every major city. Parking structures ranging from one level to five levels, 100,000 to 400,000 square feet each. High customer traffic. Urban locations with the challenges that come with them.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">30 parking garages across the country needed annual cleaning. Previous vendors were inconsistent. Quality varied wildly by location. Communication was poor. Documentation was spotty or nonexistent.</p>
+          <p class="text-gray-600 mb-6">Some garages had graffiti that had been sitting for months. Others had odor issues, oil stains, and debris buildup that made customers feel unsafe.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We implemented a standardized cleaning program with consistent processes across all 30 locations. Single point of contact for the entire program. Same documentation package from every garage.</p>
+          <p class="text-gray-600 mb-6">Scope included full surface cleaning, graffiti removal, deodorizing, oil and grease treatment, and debris removal.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>30 garages cleaned annually on schedule</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Consistent quality across all locations nationwide</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Complete documentation for every job</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Customer safety complaints related to garage conditions decreased significantly</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Program now in its fourth consecutive year</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-gray-50 border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"We finally have a vendor we don't have to manage. They show up, do the work, document everything, and it's done."</p>
+            <p class="text-gray-800 font-semibold">— VP of Facilities</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Parking Garage</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Need a partner for your parking structures?</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 3: Compactors -->
+  <section class="bg-gray-50 border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Compactors</span>
+            <span class="text-gray-500 text-sm">Restaurant Group — 22 Locations, EPA Compliance</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Zero Compactor Citations Since Day One</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A multi-location restaurant group with 22 locations across Texas and California. High waste volume. Grease, food waste, and organic matter creating compliance concerns. California locations under particular scrutiny from regulators.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">Health inspectors were citing locations for compactor conditions. Grease buildup. Odor issues. Potential EPA violations. California locations were at risk for significant fines.</p>
+          <p class="text-gray-600 mb-6">Some compactors hadn't been properly cleaned in years. One location had larvae. Another had contamination that bordered on biohazard.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We implemented quarterly compactor cleaning across all 22 locations. Full disassembly, decontamination, and compliance documentation. Built a preventative maintenance program designed around health inspection schedules.</p>
+          <p class="text-gray-600 mb-6">Every cleaning included EPA-ready documentation showing the work was done, when it was done, and what condition the equipment was in.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>Zero compactor-related citations since program started</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Complete compliance documentation for every inspection</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Extended compactor equipment lifespan</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Reduced odor complaints from neighboring businesses</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>California EPA compliance achieved and maintained</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Estimated savings of $50,000 in avoided fines and equipment replacement</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"We went from dreading inspections to passing them without a second thought. The documentation alone is worth what we pay."</p>
+            <p class="text-gray-800 font-semibold">— Director of Operations</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Compactor</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Keep your compactors compliant and your equipment lasting longer.</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 4: Building Envelope -->
+  <section class="bg-white border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Building Envelope</span>
+            <span class="text-gray-500 text-sm">Multi-Location Retail Chain — 75 Locations</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">75 Buildings Looking 10 Years Newer</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A national clothing retailer with 75 locations across the Southeast and Texas. Mix of mall locations and standalone stores. Building exteriors exposed to humidity, sun, and pollution.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">Black algae was visible on multiple building exteriors, particularly in humid markets. Buildings looked old and neglected even though interiors had been recently updated.</p>
+          <p class="text-gray-600 mb-6">Previous attempts at cleaning had been inconsistent. Some vendors used harsh chemicals that damaged surfaces. Within weeks, the discoloration returned.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We implemented a soft wash program specifically designed for algae removal without surface damage. Created a building-by-building assessment to prioritize worst-affected locations.</p>
+          <p class="text-gray-600 mb-6">Established annual maintenance schedule to prevent algae from returning to problem levels. Used surface-appropriate chemicals matched to each building's construction materials.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>All 75 locations cleaned within 60-day window</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Zero surface damage (previous vendors had etched several building facades)</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Algae recurrence reduced by 80% with preventative annual treatments</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Brand consistency restored across all markets</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Landlord complaints about building appearance eliminated</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Contract expanded to include window cleaning at 31 locations</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-gray-50 border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"Our buildings look 10 years newer. Customers have actually commented on how much better the stores look from the outside."</p>
+            <p class="text-gray-800 font-semibold">— Regional Facilities Manager</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Building Envelope</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Your whole building should look like the front entrance.</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 5: Window Cleaning -->
+  <section class="bg-gray-50 border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Window Cleaning</span>
+            <span class="text-gray-500 text-sm">Specialty Retail Chain — 31 Storefronts</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Clean Windows. Visible Merchandising. Happy Brand Team.</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A high-end specialty retail chain with 31 mall and street-front locations. Window displays are a major part of the customer experience. Significant investment in visual merchandising.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">Windows were the primary visual element of storefronts. Cloudy, spotted windows were undermining expensive visual merchandising investments.</p>
+          <p class="text-gray-600 mb-6">Mall management at several locations had issued warnings about storefront appearance. Hard water stains at some locations had built up over years and wouldn't come off with standard cleaning.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We implemented monthly window cleaning for all 31 locations. Added hard water stain removal treatment for problem locations.</p>
+          <p class="text-gray-600 mb-6">Created a documentation system so the visual merchandising team could coordinate window display changes with cleaning schedule. Provided 48-hour advance notice before each visit.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>Monthly cleaning schedule maintained across all 31 locations</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Hard water staining eliminated at previously problematic locations</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Visual merchandising team reports improved customer engagement with window displays</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Zero mall management complaints since program started</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Added quarterly frame and sill detailing based on initial results</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Contract expanded to include entry flat work at 15 locations</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"We spend a fortune on visual merchandising. It was crazy that dirty windows were hiding all that work. Now customers actually see what we want them to see."</p>
+            <p class="text-gray-800 font-semibold">— Visual Merchandising Director</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Window Cleaning</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Let customers see what's inside.</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 6: Parking Lot Striping -->
+  <section class="bg-white border-b-4 border-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-3 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded">Parking Lot Striping</span>
+            <span class="text-gray-500 text-sm">Shopping Center Management Company — 11 Properties</span>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">11 Parking Lots. Fresh Lines. Full Compliance.</h2>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Client</h3>
+          <p class="text-gray-600 mb-6">A regional shopping center management company with 11 properties. Mix of strip centers and larger retail developments. High tenant turnover means constant attention to property appearance.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Challenge</h3>
+          <p class="text-gray-600 mb-3">Parking lot lines had faded to the point of being nearly invisible at several properties. Handicap spaces were out of ADA compliance. Fire lanes were unclear. One property had received a citation from the fire marshal.</p>
+          <p class="text-gray-600 mb-6">Tenants were complaining about customer confusion in parking lots. Customers were taking up multiple spaces, blocking fire lanes, and parking in handicap spots that weren't clearly marked.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-2">The Solution</h3>
+          <p class="text-gray-600 mb-3">We completed full restriping of all 11 properties within a 30-day window. Scope included every parking space, handicap space marking with compliant signage, fire lane marking, directional arrows, and tenant-specific reserved spaces.</p>
+          <p class="text-gray-600 mb-6">Created a compliance checklist for each property documenting ADA and fire code adherence. Provided before and after photos plus detailed documentation for property records.</p>
+          
+          <h3 class="text-lg font-bold text-gray-800 mb-3">The Results</h3>
+          <ul class="text-gray-600 mb-6 space-y-2">
+            <li class="flex"><span class="mr-2">•</span><span>All 11 properties restriped within timeline</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>100% ADA compliance achieved and documented</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Fire marshal citation resolved with no further issues</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Tenant complaints about parking confusion eliminated</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Established annual inspection and touch-up program</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Contract expanded to include flat work cleaning at 7 properties</span></li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-64 flex items-center justify-center mb-6">
+            <div class="text-center text-gray-500">
+              <div class="text-4xl mb-2">🖼️</div>
+              <p class="text-sm">Before/After Image</p>
+            </div>
+          </div>
+          <div class="bg-gray-50 border-2 border-gray-300 rounded-xl p-6">
+            <p class="text-gray-700 italic mb-4">"We should have done this years ago. The lots look brand new, and we have documentation proving we're compliant."</p>
+            <p class="text-gray-800 font-semibold">— Property Manager</p>
+          </div>
+          <button class="w-full mt-4 bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg border-2 border-gray-300 flex flex-col items-center justify-center">
+            <span>View Our Parking Lot Striping</span>
+            <span>Photo Gallery →</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-300">
+        <p class="text-gray-600 mb-4">Fresh lines. Clear compliance. Professional appearance.</p>
+        <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not Sure What You Need CTA -->
+  <section class="bg-gray-800 text-white py-16">
+    <div class="max-w-5xl mx-auto px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Not Sure What You Need?</h2>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Tell us about your property and we'll recommend the right services. Or just claim your free power wash and see what we can do.
+      </p>
+      <div class="flex justify-center gap-4 mb-12">
+        <button class="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium">
+          Request a Quote
+        </button>
+        <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium">
+          Claim Your Free Power Wash
+        </button>
+      </div>
+      <div class="grid grid-cols-4 gap-6 max-w-2xl mx-auto">
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl mb-2">🛡️</div>
+          <p class="text-gray-300 text-sm">Insured & Bonded</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl mb-2">🌿</div>
+          <p class="text-gray-300 text-sm">Eco-Friendly Products</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl mb-2">🇺🇸</div>
+          <p class="text-gray-300 text-sm">Nationwide Coverage</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl mb-2">✓</div>
+          <p class="text-gray-300 text-sm">Satisfaction Guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-gray-700 rounded"></div>
+            <span class="font-bold">GLEAM</span>
+          </div>
+          <p class="text-gray-500 text-sm">Your Friendly Neighborhood Power Washing Service</p>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Services</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>Entry Flat Work</p>
+            <p>Parking Garages</p>
+            <p>Compactors</p>
+            <p>Building Envelope</p>
+            <p>Window Cleaning</p>
+            <p>Parking Lot Striping</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Company</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>About Us</p>
+            <p>Contact</p>
+            <p>Case Studies</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-medium mb-3">Contact</h4>
+          <div class="space-y-2 text-gray-500 text-sm">
+            <p>1-800-GLEAM</p>
+            <p>hello@gleam.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-600 text-sm flex justify-center items-center gap-4">
+        <span>© 2025 Gleam. All rights reserved.</span>
+        <span>·</span>
+        <span>Privacy Policy</span>
+        <span>·</span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
