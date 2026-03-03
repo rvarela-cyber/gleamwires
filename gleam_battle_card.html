@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gleam Battle Card</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --header-bg: #2d3748;
+    --header-sub: #1a202c;
+    --accent-teal: #319795;
+    --accent-orange: #dd6b20;
+    --accent-red: #e53e3e;
+    --accent-green: #2f855a;
+    --accent-blue: #3182ce;
+    --teal-bg: #e6fffa;
+    --orange-bg: #fffaf0;
+    --red-bg: #fff5f5;
+    --green-bg: #f0fff4;
+    --blue-bg: #ebf8ff;
+    --text: #2d3748;
+    --text-light: #718096;
+    --border: #e2e8f0;
+    --card-bg: #fff;
+    --page-bg: #edf2f7;
+    --badge-bg: #e53e3e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--page-bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 880px; margin: 0 auto; padding: 32px 24px; }
+
+  /* HEADER */
+  .header {
+    background: var(--header-bg);
+    border-radius: 12px 12px 0 0;
+    padding: 24px 28px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header-left h1 {
+    font-size: 26px; font-weight: 700; color: #fff;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .header-left h1 .badge {
+    background: var(--badge-bg); color: #fff;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-left p { color: #a0aec0; font-size: 13.5px; margin-top: 6px; max-width: 480px; line-height: 1.5; }
+  .product-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.1); color: #fff; text-decoration: none;
+    padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 500;
+  }
+  .product-link:hover { background: rgba(255,255,255,0.18); }
+  .product-link svg { width: 14px; height: 14px; }
+  .header-sub {
+    background: var(--header-sub); color: #a0aec0; font-size: 12px;
+    padding: 7px 28px; border-radius: 0 0 12px 12px;
+    display: flex; align-items: center; gap: 6px; margin-bottom: 20px;
+  }
+  .header-sub svg { width: 13px; height: 13px; opacity: 0.5; }
+
+  /* CARDS */
+  .card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 28px; margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 16px; font-weight: 700; color: var(--text);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .icon {
+    width: 26px; height: 26px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; flex-shrink: 0;
+  }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  /* PITCH */
+  .pitch-text { font-size: 13.5px; color: var(--text); line-height: 1.7; font-style: italic; }
+
+  /* PAIN POINTS */
+  .pain-item { margin-bottom: 14px; padding-left: 12px; border-left: 3px solid var(--accent-orange); }
+  .pain-item:last-child { margin-bottom: 0; }
+  .pain-item h4 { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+  .pain-item p { font-size: 12.5px; color: var(--text-light); line-height: 1.45; }
+
+  /* VALUE PROPS */
+  .vp-item {
+    display: flex; align-items: flex-start; gap: 9px;
+    margin-bottom: 10px; font-size: 13px; color: var(--text); line-height: 1.45;
+  }
+  .vp-item:last-child { margin-bottom: 0; }
+  .vp-check {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--green-bg); color: var(--accent-green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* DISCOVERY */
+  .dq-item {
+    display: flex; gap: 10px; margin-bottom: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.45;
+  }
+  .dq-item:last-child { margin-bottom: 0; }
+  .dq-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--teal-bg); color: var(--accent-teal);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* CALL FLOW */
+  .cf-item { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
+  .cf-item:last-child { margin-bottom: 0; }
+  .cf-num {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-teal); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+  .cf-content h4 { font-size: 13.5px; font-weight: 700; color: var(--text); }
+  .cf-content p { font-size: 12px; color: var(--text-light); line-height: 1.4; }
+
+  /* OBJECTIONS */
+  .objection-item {
+    border-left: 3px solid var(--accent-green); background: var(--green-bg);
+    border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 12px;
+  }
+  .objection-item:last-child { margin-bottom: 0; }
+  .objection-item h4 { font-size: 13px; font-weight: 700; color: var(--accent-green); margin-bottom: 4px; }
+  .objection-item p { font-size: 12.5px; color: var(--text); line-height: 1.5; }
+
+  /* VENDOR PROBLEMS (bottom) */
+  .problem-item { margin-bottom: 12px; }
+  .problem-item:last-child { margin-bottom: 0; }
+  .problem-item h4 { font-size: 13.5px; font-weight: 700; color: var(--accent-red); margin-bottom: 2px; }
+  .problem-item p { font-size: 12.5px; color: var(--text-light); line-height: 1.45; }
+
+  .footer { text-align: center; padding: 20px 0 8px; color: #a0aec0; font-size: 12px; }
+
+  @media print {
+    body { background: #fff; }
+    .page { padding: 0; max-width: 100%; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Gleam <span class="badge">Free Power Wash Offer</span></h1>
+      <p>Commercial pressure washing, window cleaning, and parking lot striping for retailers, restaurants, and grocery chains. 25 years in facilities management. Vetted nationwide vendor network.</p>
+    </div>
+    <div class="header-right" style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+      <a href="https://gleampowerwashing.com" target="_blank" class="product-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Home Page
+      </a>
+      <a href="https://gleampowerwashing.com/services" target="_blank" class="product-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Services
+      </a>
+      <a href="https://gleampowerwashing.com/contact#contact-section" target="_blank" class="product-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Contact/Free Power Wash
+      </a>
+    </div>
+  </div>
+  <div class="header-sub">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Calling Notes &amp; Battle Card &mdash; Internal Use Only
+  </div>
+
+  <!-- ELEVATOR PITCH -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon" style="background:var(--blue-bg);color:var(--accent-blue);">&#10024;</span>
+      Elevator Pitch
+    </div>
+    <p class="pitch-text">"Is the outside of your building getting the same attention as the inside? Your customers form an opinion before they walk through the front door. Gleam handles pressure washing, window cleaning, and striping with a team on site within 48 hours anywhere in the country. You deal directly with company principals, not a call center, and every job comes with before-and-after documentation and a satisfaction guarantee. We service Fortune 10 retailers, national grocery chains, and restaurant groups across all 50 states. We will clean your first location for free. No cost, no commitment."</p>
+  </div>
+
+  <!-- PAIN POINTS + VALUE PROPS -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">
+        <span class="icon" style="background:var(--orange-bg);color:var(--accent-orange);">&#9888;</span>
+        Pain Points to Probe
+      </div>
+      <div class="pain-item">
+        <h4>Vendor Quality Issues</h4>
+        <p>Low-cost vendors rinse the surface, skip the gum, ignore corners, and disappear.</p>
+      </div>
+      <div class="pain-item">
+        <h4>Communication Black Hole</h4>
+        <p>Aggregators route you through call centers with zero access to the crew on site.</p>
+      </div>
+      <div class="pain-item">
+        <h4>No Documentation</h4>
+        <p>No before/after photos, no QC package, no sign-off. Job closes and they move on.</p>
+      </div>
+      <div class="pain-item">
+        <h4>Reactive, Not Preventative</h4>
+        <p>No cleaning schedule. They wait until something spills or the EPA shows up.</p>
+      </div>
+      <div class="pain-item">
+        <h4>Too Many Vendors</h4>
+        <p>Separate vendors for washing, windows, and striping. Invoice overload, inconsistent results.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <span class="icon" style="background:var(--green-bg);color:var(--accent-green);">&#10003;</span>
+        Key Value Props
+      </div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> First power wash is free, no cost, no commitment</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> On site within 48 hours, same-day quotes within an hour</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> Direct access to company principals, not a call center</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> Before/after photo documentation and sign-off on every job</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> One vendor for pressure washing, windows, and striping</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> Nationwide coverage across all 50 states</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> 100% satisfaction guarantee, they come back until it is right</div>
+      <div class="vp-item"><span class="vp-check">&#10003;</span> Eco-friendly products, heated water trucks, water reclamation</div>
+    </div>
+  </div>
+
+  <!-- DISCOVERY QUESTIONS + CALL FLOW -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">
+        <span class="icon" style="background:var(--teal-bg);color:var(--accent-teal);">&#128270;</span>
+        Discovery Questions
+      </div>
+      <div class="dq-item"><span class="dq-num">1</span> Who handles your exterior cleaning right now?</div>
+      <div class="dq-item"><span class="dq-num">2</span> How happy are you with your current vendor's quality?</div>
+      <div class="dq-item"><span class="dq-num">3</span> Do you get before-and-after documentation on jobs?</div>
+      <div class="dq-item"><span class="dq-num">4</span> Are you using separate vendors for washing, windows, and striping?</div>
+      <div class="dq-item"><span class="dq-num">5</span> Do you have a preventative maintenance schedule or is it reactive?</div>
+      <div class="dq-item"><span class="dq-num">6</span> How many locations are you managing?</div>
+      <div class="dq-item"><span class="dq-num">7</span> Have you ever had a vendor damage concrete, brick, or signage?</div>
+      <div class="dq-item"><span class="dq-num">8</span> Are your compactors or back-of-house areas EPA compliant?</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <span class="icon" style="background:var(--teal-bg);color:var(--accent-teal);">&#128222;</span>
+        Recommended Call Flow
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">1</span>
+        <div class="cf-content"><h4>Opener</h4><p>Introduce yourself, reference their facilities role</p></div>
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">2</span>
+        <div class="cf-content"><h4>Pain Discovery</h4><p>Ask about current vendor, quality, and communication</p></div>
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">3</span>
+        <div class="cf-content"><h4>Agitate</h4><p>Highlight shortfalls: reference What Is Wrong with Most Power Washing Vendors below</p></div>
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">4</span>
+        <div class="cf-content"><h4>Present Solution</h4><p>Position Gleam as single-vendor nationwide alternative</p></div>
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">5</span>
+        <div class="cf-content"><h4>Free Power Wash CTA</h4><p>One location free, no risk, see the process firsthand</p></div>
+      </div>
+      <div class="cf-item">
+        <span class="cf-num">6</span>
+        <div class="cf-content"><h4>Next Steps</h4><p>Schedule a call with Gleam Team or send the website link</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTION HANDLING -->
+  <div class="card">
+    <div class="card-title">
+      <span class="icon" style="background:var(--red-bg);color:var(--accent-red);">&#9675;</span>
+      Objection Handling
+    </div>
+    <div class="objection-item">
+      <h4>"We already have a vendor."</h4>
+      <p>Most do. But are you getting documentation, real QC, and direct access to principals? We will clean one location free so you can compare side by side.</p>
+    </div>
+    <div class="objection-item">
+      <h4>"We go through CBRE / JLL for that."</h4>
+      <p>You are getting whoever picks up the work order first, plus the aggregator markup. We cut out the middleman with direct access and consistent quality.</p>
+    </div>
+    <div class="objection-item">
+      <h4>"No budget for exterior cleaning."</h4>
+      <p>That is why the free power wash exists. Zero cost. Most clients did not budget for it until they saw the before and after.</p>
+    </div>
+    <div class="objection-item">
+      <h4>"We do not need it right now."</h4>
+      <p>Most do not until an EPA fine, customer complaint, or slip hazard forces it. Let us have a quick conversation so you know who to call.</p>
+    </div>
+    <div class="objection-item">
+      <h4>"Your price is too high."</h4>
+      <p>The cheap guys rent a machine, rinse the surface, and leave. We bring heated trucks and professional equipment. The difference shows when the concrete dries.</p>
+    </div>
+    <div class="objection-item">
+      <h4>"We tried a company before, it did not work out."</h4>
+      <p>That is the exact problem Gleam solves. Vetted vendors, heated water, full documentation, satisfaction guarantee. The free wash lets you prove it before committing.</p>
+    </div>
+  </div>
+
+  <!-- VENDOR PROBLEMS (moved to bottom) -->
+  <div class="card" style="border-left: 4px solid var(--accent-red);">
+    <div class="card-title">
+      <span class="icon" style="background:var(--red-bg);color:var(--accent-red);">&#9888;</span>
+      What Is Wrong with Most Power Washing Vendors
+    </div>
+    <div class="problem-item">
+      <h4>They cut corners</h4>
+      <p>Rent a machine from Home Depot, skip the gum, ignore corners, rinse the surface. Looks fine wet, looks the same when it dries.</p>
+    </div>
+    <div class="problem-item">
+      <h4>They disappear after the invoice</h4>
+      <p>No before/after photos, no sign-off docs, no QC. If something is wrong, they are already gone.</p>
+    </div>
+    <div class="problem-item">
+      <h4>You never talk to anyone who matters</h4>
+      <p>Aggregators post work orders and whoever picks it up first goes out. You get $15/hour dispatchers, not principals.</p>
+    </div>
+    <div class="problem-item">
+      <h4>Cold water and cheap chemicals</h4>
+      <p>No heated trucks. Harsh chemicals go down the storm drain. EPA fines hit the property owner, not the vendor.</p>
+    </div>
+    <div class="problem-item">
+      <h4>They cannot scale</h4>
+      <p>Fine for one location. Cannot handle 40 garages or 200 storefronts across multiple states.</p>
+    </div>
+    <div class="problem-item">
+      <h4>No skin in the game</h4>
+      <p>Every job is a one-and-done transaction. No relationship, no accountability, no reason to come back.</p>
+    </div>
+  </div>
+
+  <div class="footer">Gleam Battle Card &mdash; Confidential</div>
+
+</div>
+</body>
+</html>
